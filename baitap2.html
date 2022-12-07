@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<tr><td>canh a<input id="a" type="text"></td></tr>
+<tr><td>canh b<input id="b" type="text"></td></tr>
+<tr><td>canh c<input id="c" type="text"></td></tr>
+    <tr><button onclick="kiemtra()">kiemtra</button></tr>
+    <p id="ketqua">ketqua</p>
+</table>
+<script>
+   function kiemtra (){
+       let a = +document.getElementById('a').value;
+       let b = +document.getElementById('b').value;
+       let c = +document.getElementById('c').value;
+       if (a + b > c && a + c > b && b + c > a)
+       {
+           if ((a * a) + (b * b) == c * c || (b * b) + (c * c) == (a * a) || (a * a) + (c * c) == b * b){
+               document.getElementById('ketqua').innerHTML="la tam giac vuong"
+           }
+
+       }else { document.getElementById('ketqua').innerHTML="k phai tam giac"}
+   }
+</script>
+</body>
+</html>
